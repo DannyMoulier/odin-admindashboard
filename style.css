@@ -207,17 +207,27 @@ body {
   grid-template-columns: 1fr 300px;
   grid-column: 2/3;
   height: 100%;
-  column-gap: 20px;
+  column-gap: 36px;
+}
+
+.container > .main {
+  padding-left: 32px ;
 }
 
 .card {
   padding: 36px;
 }
 
-.card .title {
-  font-size: 1.9rem;
+.card > .title {
+  font-size: 1.4rem;
   margin-bottom: 16px;
 }
+
+.main .title {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
 
 .projects-wrapper > .cards {
   display: grid;
