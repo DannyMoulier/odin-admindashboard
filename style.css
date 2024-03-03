@@ -33,7 +33,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: 256px;
-  grid-template-rows: 100px;
+  grid-template-rows: 120px;
   height: 100vh;
 }
 
@@ -102,8 +102,8 @@ body {
 
 .header {
   display: grid;
-  height: 100px;
-  gap: 8px;
+  /* height: 100px; */
+  gap: 16px;
 }
 
 .header .profile {
@@ -116,13 +116,15 @@ body {
   display: grid;
   align-items: center;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 35px;
+  /* grid-template-rows: 35px; */
+  padding-inline: 32px;
 }
 
 .header-section-bottom {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 35px;
+  grid-template-rows: 50px;
+  padding-inline: 32px;
 }
 
 .header-section-top > .profile {
@@ -140,10 +142,11 @@ body {
 
 .user-action-buttons {
   display: grid;
-  grid-template-columns: 70px 70px 70px;
-  justify-items: end;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: stretch;
   justify-self: end;
   align-items: center;
+  gap: 12px
 }
 
 /* style */
@@ -194,9 +197,25 @@ body {
 .user-action-buttons button {
   background-color: var(--color-base-button);
   border-radius: 6px;
-  width: 58px;
+  padding-inline: 6px;
   height: 28px;
   border: 1px solid var(--color-border-button);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.user-action-buttons button:hover {
+  background-color: rgb(45,160,66);
+}
+
+.button-icon {
+  fill: #ffffff;
+  width: 12px;
+  height: 12px;
 }
 
 /* main */
@@ -208,24 +227,6 @@ body {
   grid-column: 2/3;
   height: 100%;
   column-gap: 36px;
-}
-
-.container > .main {
-  padding-left: 32px ;
-}
-
-.card {
-  padding: 36px;
-}
-
-.card > .title {
-  font-size: 1.4rem;
-  margin-bottom: 16px;
-}
-
-.main .title {
-  font-size: 1.6rem;
-  margin-bottom: 14px;
 }
 
 
@@ -246,4 +247,26 @@ body {
   background-color: var(--color-second-bg);
   border: 1px solid var(--color-base-border);
   border-radius: 6px;
+}
+
+.container > .main {
+  padding-inline: 32px;
+}
+
+.card {
+  padding: 36px;
+}
+
+.card > .title {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
+.main .title {
+  font-size: 1.6rem;
+  margin-bottom: 14px;
+}
+
+.side-content-wrapper > div {
+  margin-bottom: 32px;
 }
