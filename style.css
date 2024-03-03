@@ -11,8 +11,9 @@
     --color-base-bg: rgb(1, 4, 9);
     --color-second-bg: rgb(13, 17, 23);
     --color-base-button: rgb(33, 134, 53);
+    --color-border-button: rgb(62, 146, 75);
     --color-base-border: rgb(44, 48, 56);
-    --color-base-text: rgb(229,237,243);
+    --color-base-text: rgb(229, 237, 243);
   }
 }
 
@@ -64,12 +65,10 @@ body {
   /* border-bottom : 1px solid var(--color-base-border); */
 }
 
-
-
 /* style */
 .sidebar {
   background-color: var(--color-second-bg);
-  border-right : 1px solid var(--color-base-border);
+  border-right: 1px solid var(--color-base-border);
 }
 
 .sidebar a {
@@ -104,6 +103,13 @@ body {
 .header {
   display: grid;
   height: 100px;
+  gap: 8px;
+}
+
+.header .profile {
+  display: grid;
+  grid-template-columns: 35px 40px 1fr;
+  align-items: center;
 }
 
 .header-section-top {
@@ -134,14 +140,17 @@ body {
 
 .user-action-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 70px 70px 70px;
+  justify-items: end;
+  justify-self: end;
+  align-items: center;
 }
 
 /* style */
 .header {
   background-color: var(--color-base-bg);
   color: var(--color-base-text);
-  border-bottom : 1px solid var(--color-base-border);
+  border-bottom: 1px solid var(--color-base-border);
 }
 
 .header .label-icon {
@@ -165,6 +174,29 @@ body {
   align-items: center;
   /* justify-content: center; */
   gap: 14px;
+}
+
+.notification-icon {
+  fill: var(--color-base-text);
+  width: 14px;
+  height: 14px;
+}
+
+.header .header-section-top .profile-pic {
+  background-image: url("./imgs/profile.jpg");
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.user-action-buttons button {
+  background-color: var(--color-base-button);
+  border-radius: 6px;
+  width: 58px;
+  height: 28px;
+  border: 1px solid var(--color-border-button);
 }
 
 /* main */
@@ -204,6 +236,4 @@ body {
   background-color: var(--color-second-bg);
   border: 1px solid var(--color-base-border);
   border-radius: 6px;
-
 }
-
