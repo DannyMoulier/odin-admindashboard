@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-  --color-base-bg: rgb(255,255,255);
-  --color-second-bg: rgb(247,248,250);
+  --color-base-bg: rgb(255, 255, 255);
+  --color-second-bg: rgb(247, 248, 250);
   --color-base-button: rgb(33, 134, 53);
   --color-border-button: rgb(62, 146, 75);
-  --color-base-border: rgb(209,215,223);
-  --color-base-text: rgb(31,35,40);
+  --color-base-border: rgb(209, 215, 223);
+  --color-base-text: rgb(31, 35, 40);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -256,7 +256,8 @@ body {
 .projects-wrapper > .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-  gap: 15px;
+  row-gap: 32px;
+  column-gap: 24px;
   grid-row: 1 / 2;
 }
 
@@ -292,13 +293,26 @@ body {
 }
 
 .side-content-wrapper .card {
-  padding: 28px;
+  padding-inline: 28px;
+  padding-block: 8px;
   width: 241.406px;
+}
+
+.card-announcement {
+  padding-block: 16px;
+}
+
+/* .card-announcement:not(:last-child) {
+  border-bottom: 1px solid var(--color-base-border);
+} */
+
+.card-announcement:nth-child(even) {
+  border-block: 1px solid var(--color-base-border);
 }
 
 .card-announcement-text {
   font-size: 0.75rem;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .card-announcement-title {
@@ -328,7 +342,7 @@ body {
   gap: 12px;
 }
 
-.card-icon{
+.card-icon {
   width: 16px;
   height: 16px;
   fill: var(--color-base-text);
