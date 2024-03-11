@@ -41,7 +41,7 @@ body {
   height: 100vh;
 }
 
-.container > div {
+.container > .sidebar, .container > .header {
   padding: 15px;
 }
 /* sidebar */
@@ -73,6 +73,8 @@ body {
 .sidebar {
   background-color: var(--color-second-bg);
   border-right: 1px solid var(--color-base-border);
+
+  /* background-color: var(--color-base-bg); */
 }
 
 .sidebar a {
@@ -358,7 +360,7 @@ body {
 
 .main .title {
   font-size: 1.6rem;
-  margin-bottom: 14px;
+  padding-block: 14px;
 }
 
 .side-content-wrapper > div {
@@ -392,11 +394,15 @@ body {
   .side-content-wrapper .card {
     width: 100%;
   }
+
+  .main > .projects-wrapper > .title, .side-content-wrapper .title {
+    position: sticky;
+    top: 0px;
+    background-color: var(--color-base-bg);
+  }
 }
 
 @media screen and (max-width: 950px) {
-
-
   .container {
     grid-template-rows: 1fr;
   }
