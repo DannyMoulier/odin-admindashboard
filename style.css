@@ -7,6 +7,7 @@
   --color-border-button: rgb(62, 146, 75);
   --color-base-border: rgb(209, 215, 223);
   --color-base-text: rgb(31, 35, 40);
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
     --color-border-button: rgb(62, 146, 75);
     --color-base-border: rgb(44, 48, 56);
     --color-base-text: rgb(229, 237, 243);
+    color-scheme: dark;
   }
 }
 
@@ -41,7 +43,8 @@ body {
   height: 100vh;
 }
 
-.container > .sidebar, .container > .header {
+.container > .sidebar,
+.container > .header {
   padding: 15px;
 }
 /* sidebar */
@@ -395,7 +398,8 @@ body {
     width: 100%;
   }
 
-  .main > .projects-wrapper > .title, .side-content-wrapper .title {
+  .main > .projects-wrapper > .title,
+  .side-content-wrapper .title {
     position: sticky;
     top: 0px;
     background-color: var(--color-base-bg);
