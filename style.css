@@ -7,6 +7,8 @@
   --color-border-button: rgb(62, 146, 75);
   --color-base-border: rgb(209, 215, 223);
   --color-base-text: rgb(31, 35, 40);
+  --color-border-hover: rgb(212,213,215);
+  --color-base-hover: rgb(243,244,246);
   color-scheme: light;
 }
 
@@ -18,8 +20,14 @@
     --color-border-button: rgb(62, 146, 75);
     --color-base-border: rgb(44, 48, 56);
     --color-base-text: rgb(229, 237, 243);
+    --color-border-hover: rgb(139, 148, 158);
+    --color-base-hover: rgb(47,54,61);
     color-scheme: dark;
   }
+}
+
+svg:hover {
+  fill: rgb(30, 111, 235);;
 }
 
 * {
@@ -69,25 +77,24 @@ body {
 .sidebar .sidebar-section-2,
 .sidebar .title {
   padding-left: 24px;
-  /* border-bottom : 1px solid var(--color-base-border); */
 }
 
 /* style */
 .sidebar {
   background-color: var(--color-second-bg);
   border-right: 1px solid var(--color-base-border);
-
-  /* background-color: var(--color-base-bg); */
 }
 
 .sidebar a {
   color: var(--color-base-text);
-  /* fill: var(--color-base-text); */
   margin-block: 16px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 16px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
 }
 
 .sidebar .sidebar-icon {
@@ -172,6 +179,10 @@ body {
   fill: var(--color-base-text);
 }
 
+.header .label-icon:hover {
+  fill: rgb(30, 111, 235);
+}
+
 .header input {
   max-width: 512px;
   width: 100%;
@@ -189,10 +200,23 @@ body {
   margin-right: 28px;
 }
 
+.header .profile .user-name {
+  color: var(--color-base-text);
+}
+
+.header .profile .user-name:hover {
+  text-decoration: underline;
+}
+
 .notification-icon {
   fill: var(--color-base-text);
   width: 14px;
   height: 14px;
+}
+
+.notification-icon:hover {
+  fill: rgb(30, 111, 235);
+  cursor: pointer;
 }
 
 .header .header-section-top .profile-pic {
@@ -244,6 +268,11 @@ body {
 
 .user-title-wapper > .user-name {
   font-size: 1.3rem;
+  color: var(--color-base-text);
+}
+
+.user-title-wapper > .user-name:hover {
+  text-decoration: underline;
 }
 
 /* main */
@@ -310,6 +339,13 @@ body {
   background-color: var(--color-second-bg);
   border: 1px solid var(--color-base-border);
   border-radius: 6px;
+  transition: border-color 0.075s;
+  transition: background-color 0.075s;
+}
+
+.card:hover {
+  border-color: var(--color-border-hover);
+  background-color: var(--color-base-hover);
 }
 
 .card > .text {
